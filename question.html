@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simi sai</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Perpetua', serif;
+            background-image: url('https://i.pinimg.com/736x/09/2b/95/092b956ccd59ab98d7113685b2855923.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px; 
+            color:#A94064; 
+        }
+        .buttons {
+            position: relative;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;  
+            
+        }
+        #yes {
+            background-color: #4ab058;
+            color: white;
+        }
+        #no {
+            background-color: #d9c9cd;
+            color: white;
+            position: absolute;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+        <script>
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("no").style.left = x + "px";
+            document.getElementById("no").style.top = y + "px";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="question"> jk i may not bake good brownies but <br> will u be my valentines? ❤️</h2>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/cd/91/80/cd918056a665cdcf1841e4e40b194a92.jpg" height = '500' width = '500'>
+        </div>
+        <div class="buttons">
+            <form action="options.php" method="POST">
+                <button id="yes" type="submit">yes maam </button>
+            </form>
+            <button id="no" onmouseover="moveButton()">i dare u to click me 😢</button>
+        </div>
+    </div>
+</body>
+</html>
